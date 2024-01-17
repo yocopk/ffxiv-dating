@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
   let link = [
     { id: 1, name: "HOME", link: "/" },
     { id: 2, name: "SERVICE", link: "/service" },
@@ -25,25 +27,27 @@ export default function Navbar() {
             fill="white"
           ></path>
         </svg>
-        <p className="text-white uppercase">Tinfantasy</p>
-        <ul className="bg-red-200">
+        <p className="text-white uppercase font-bold">Tinfantasy</p>
+        <div onClick={() => setOpen(!open)} className="text-white text-3xl">
+          <ion-icon name={open ? "close-outline" : "menu-outline"}></ion-icon>
+        </div>
+      </div>
+      <div>
+        <ul
+          className={`bg-red-400 w-full shadow-md absolute left-0 top-12 p-4 flex flex-col items-center gap-4 transition-all duration-350 ease-in ${
+            open ? "top-12" : "top-[-500px]"
+          }`}
+        >
           {link.map((links) => (
             <li key={links.id}>
-              <Link to={links.link}>{links.name}</Link>
+              <Link
+                className="text-white hover:text-yellow-200"
+                to={links.link}
+              >
+                {links.name}
+              </Link>
             </li>
           ))}
-          {/* <svg
-            className=""
-            width="20"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            id="hamburger-menu"
-          >
-            <path
-              fill="white"
-              d="M5 7h14c.6 0 1-.4 1-1s-.4-1-1-1H5c-.6 0-1 .4-1 1s.4 1 1 1zm0 6h14c.6 0 1-.4 1-1s-.4-1-1-1H5c-.6 0-1 .4-1 1s.4 1 1 1zm0 6h14c.6 0 1-.4 1-1s-.4-1-1-1H5c-.6 0-1 .4-1 1s.4 1 1 1z"
-            ></path>
-          </svg> */}
         </ul>
       </div>
     </nav>
