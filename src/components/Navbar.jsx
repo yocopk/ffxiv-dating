@@ -11,7 +11,7 @@ export default function Navbar() {
   ];
   return (
     <nav className="w-full bg-red-400">
-      <div className="bg-red-400 fixed shadow-md container mx-auto w-full flex justify-between items-center py-3 px-2">
+      <div className="bg-red-400 fixed shadow-md container mx-auto w-full flex justify-between items-center py-3 px-2 z-10">
         <svg
           id="logo-88"
           width="20"
@@ -34,14 +34,14 @@ export default function Navbar() {
       </div>
       <div>
         <ul
-          className={`bg-red-400 w-full shadow-md absolute left-0 top-12 p-4 flex flex-col items-center gap-4 transition-all duration-350 ease-in ${
+          className={`bg-red-400 w-full shadow-md absolute left-0 top-12 p-4 flex flex-col items-center gap-4 transition-all duration-400 ${
             open ? "top-12" : "top-[-500px]"
           }`}
         >
           {link.map((links) => (
-            <li key={links.id}>
+            <li className="mt-4" key={links.id}>
               <Link
-                className="text-white hover:text-yellow-200"
+                className="text-white text-md hover:text-yellow-200"
                 to={links.link}
               >
                 {links.name}
