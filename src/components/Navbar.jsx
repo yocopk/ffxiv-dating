@@ -10,8 +10,8 @@ export default function Navbar() {
     { id: 4, name: "CONTACT", link: "/contact" },
   ];
   return (
-    <nav className="w-full bg-red-400">
-      <div className="bg-red-400 fixed shadow-md container mx-auto w-full flex justify-between items-center py-3 px-2 z-10">
+    <nav className="container mx-auto fixed left-0 right-0">
+      <div className="bg-red-400 flex justify-between items-center py-3 px-2 z-10">
         <svg
           id="logo-88"
           width="20"
@@ -34,14 +34,27 @@ export default function Navbar() {
       </div>
       <div>
         <ul
-          className={`bg-red-400 w-full shadow-md absolute left-0 top-12 p-4 flex flex-col items-center gap-4 transition-all duration-400 ${
+          className={`bg-red-400 select-none w-full z-[-1] shadow-md absolute border-t-2 left-0 top-12 p-4 flex flex-col items-center mt-3 transition-all duration-400 ${
             open ? "top-12" : "top-[-500px]"
           }`}
         >
+          <Link
+            className="bg-white m-4 p-3 rounded-md hover:bg-gray-200"
+            to="/"
+          >
+            Log-In
+          </Link>
+          <p className="text-xs">
+            Don't Have an account?{" "}
+            <span className="text-white cursor-pointer hover:text-gray-200">
+              <Link to="/"></Link>Sign-up now!
+            </span>
+            <hr className="mt-4" />
+          </p>
           {link.map((links) => (
-            <li className="mt-4" key={links.id}>
+            <li className="p-4" key={links.id}>
               <Link
-                className="text-white text-md hover:text-yellow-200"
+                className="text-white text-md hover:border-b-2 font-bold"
                 to={links.link}
               >
                 {links.name}
