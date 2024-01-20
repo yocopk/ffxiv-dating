@@ -10,7 +10,7 @@ export default function Navbar() {
     { id: 4, name: "CONTACT", link: "/contact" },
   ];
   return (
-    <nav className="fixed bg-red-400 left-0 right-0 z-10">
+    <nav className="fixed shadow-md bg-red-400 left-0 right-0 z-10">
       <div className="bg-red-400 flex md:max-w-[1400px] mx-auto justify-between items-center py-3 px-2">
         <svg
           id="logo-88"
