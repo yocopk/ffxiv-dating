@@ -10,8 +10,8 @@ export default function Navbar() {
     { id: 4, name: "CONTACT", link: "/contact" },
   ];
   return (
-    <nav className="fixed shadow-md bg-red-400 left-0 right-0 z-10">
-      <div className="bg-red-400 flex md:max-w-[1400px] mx-auto justify-between items-center py-3 px-2">
+    <nav className="fixed bg-gradient-to-r from-red-300 to-pink-400 left-0 right-0 z-10">
+      <div className="bg-gradient-to-r from-red-300 to-pink-400 flex md:max-w-[1400px] mx-auto justify-between items-center py-3 px-2">
         <svg
           id="logo-88"
           width="20"
@@ -34,7 +34,7 @@ export default function Navbar() {
       </div>
       <div>
         <ul
-          className={`bg-red-400 select-none w-full z-[-1] shadow-md absolute border-t-2 left-0 top-12 p-4 flex flex-col items-center mt-3 transition-all duration-400 ${
+          className={`bg-gradient-to-r from-red-300 to-pink-400 select-none w-full z-[-1] shadow-md absolute border-t-2 left-0 top-12 p-4 flex flex-col items-center mt-3 transition-all duration-400 ${
             open ? "top-12" : "top-[-500px]"
           }`}
         >

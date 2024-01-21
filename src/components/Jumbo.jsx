@@ -1,32 +1,44 @@
 export default function Jumbo() {
   return (
-    <div className="pt-56 bg-gradient-to-r from-red-300 to-pink-400 h-screen">
-      <div className="flex flex-col md:flex-row md:justify-evenly">
-        <div className="px-4">
-          <h1 className="text-6xl text-black pb-2 font-bold">TINFANTASY</h1>
-          <h2 className="text-4xl mb-2 text-gray-800">
-            The Final Fantasy XIV dating web site.
-          </h2>
-          <p className="w-[400px] text-black">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo
-            magnam quaerat voluptatibus veritatis mollitia, consectetur
-            inventore quo commodi tempora.
+    <section className="bg-gradient-to-r from-red-300 to-pink-400 h-screen dark:bg-gray-900">
+      <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+        <div className="mr-auto place-self-center lg:col-span-7">
+          <h1 className="max-w-2xl mb-4 text-4xl text-black font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">
+            TINFANTASY
+          </h1>
+          <p className="max-w-2xl mb-6 font-light text-black lg:mb-8 md:text-lg lg:text-xl">
+            From checkout to global sales tax compliance, companies around the
+            world use Flowbite to simplify their payment stack.
           </p>
-          <div className="flex flex-row justify-center gap-3">
-            <button className="p-3 text-black bg-white rounded-md mt-4 transition-all duration-300  hover:bg-gray-200">
-              Start now!
-            </button>
-
-            <button className="p-3 text-black border-2 border-black rounded-md mt-4 transition-all duration-300 hover:border-white  hover:bg-white">
-              Tell me more..
-            </button>
-          </div>
+          <a
+            href="#"
+            className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300"
+          >
+            Get started
+            <svg
+              className="w-5 h-5 ml-2 -mr-1"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"></path>
+            </svg>
+          </a>
+          <a
+            href="#"
+            className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+          >
+            Speak to Sales
+          </a>
         </div>
-
-        <div className="mt-6 mx-auto w-[170px] md:w-[300px] md:mt-[-57px]">
-          <img src="src\assets\iphone-copia.png" alt="" />
+        <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+          <img
+            className="rounded-xl border-b-8 pt-6 border-black"
+            src="src\assets\iphone-copia.png"
+            alt="mockup"
+          />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
