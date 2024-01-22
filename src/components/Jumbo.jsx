@@ -1,6 +1,6 @@
 export default function Jumbo() {
   return (
-    <section className="bg-gradient-to-r from-red-300 to-pink-400 h-screen pt-24">
+    <section className="bg-gradient-to-r from-red-300 to-pink-400 h-screen pt-14 md:pl-32">
       <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
         <div className="mr-auto place-self-center lg:col-span-7">
           <h1 className="max-w-2xl mb-4 text-4xl text-black font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">
@@ -35,10 +35,10 @@ export default function Jumbo() {
             Tell me more..
           </a>
         </div>
-        <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+        <div className="w-[220px] md:w-[270px] mx-auto md:mx-0 h-auto lg:mt-0 lg:col-span-5 lg:flex">
           <img
-            className="rounded-xl border-b-8 pt-6 border-black"
-            src="src\assets\iphone-copia.png"
+            className="pt-6"
+            src="src\assets\smartphone-jumbo.png"
             alt="mockup"
           />
         </div>
