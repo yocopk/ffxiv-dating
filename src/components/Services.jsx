@@ -1,4 +1,24 @@
 export default function Services() {
+  const service = [
+    {
+      id: 1,
+      icon: "checkmark-done-outline",
+      title: "Verified Members.",
+      text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. aliquam dolores iste officiis odit dolore enim quam libero.",
+    },
+    {
+      id: 2,
+      icon: "heart-outline",
+      title: "Soul mate guaranteed.",
+      text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. aliquam dolores iste officiis odit dolore enim quam libero.",
+    },
+    {
+      id: 3,
+      icon: "bulb-outline",
+      title: "Easy to use.",
+      text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. aliquam dolores iste officiis odit dolore enim quam libero.",
+    },
+  ];
   return (
     <div className="bg-white flex flex-col md:flex-row items-center gap-4 md:h-auto w-full py-6 md:py-16">
       <div className="flex px-10">

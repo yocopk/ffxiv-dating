@@ -39,14 +39,14 @@ export default function Navbar() {
           }`}
         >
           <Link
-            className="bg-[#917D7D] text-white m-4 p-3 rounded-md hover:bg-black hover:text-white"
+            className="bg-red-500 text-white m-4 p-3 rounded-md hover:bg-black hover:text-white"
             to="/"
           >
             Log-In
           </Link>
           <p className="text-xs text-black">
-            Don't Have an account?{" "}
-            <span className="text-red-400 cursor-pointer hover:text-gray-200">
+            Don't have an account?{" "}
+            <span className="text-red-400 cursor-pointer hover:text-black">
               <Link to="/"></Link>Sign-up now!
             </span>
             <hr className="mt-4" />
