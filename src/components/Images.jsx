@@ -5,7 +5,7 @@ export default function Images() {
     { id: 3, path: "src/assets/images-3.png", text: "Party" },
   ];
   return (
-    <div className="bg-gray-100 w-full py-24 px-20 flex justify-between gap-10">
+    <div className="bg-gray-100 w-full px-2 py-4 md:py-24 md:px-20 flex flex-col lg:flex-row  justify-between gap-10">
       {image.map((images) => {
         return (
           <div
