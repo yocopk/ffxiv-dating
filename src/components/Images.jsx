@@ -10,7 +10,8 @@ export default function Images() {
         return (
           <div
             key={images.id}
-            className={`bg-[url('${images.path}')] bg-cover h-[300px] overflow-hidden w-full rounded-xl bg-center flex items-end shadow-md transition-all duration-300 hover:scale-105`}
+            className="bg-cover h-[300px] overflow-hidden w-full rounded-xl bg-center flex items-end shadow-md transition-all duration-300 hover:scale-105"
+            style={{ backgroundImage: `url(${images.path})` }}
           >
             <p className="px-6 py-2 mb-8 font-bold text-white text-4xl drop-shadow-xl bg-black/60">
               {images.text}

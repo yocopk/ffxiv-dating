@@ -39,7 +39,7 @@ export default function Navbar() {
           }`}
         >
           <Link
-            className="bg-red-500 text-white m-4 p-3 rounded-md hover:bg-black hover:text-white"
+            className="bg-red-500 text-white m-4 p-3 rounded-md transition-all hover:bg-black hover:text-white"
             to="/"
           >
             Log-In

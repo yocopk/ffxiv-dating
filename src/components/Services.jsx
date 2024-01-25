@@ -25,11 +25,13 @@ export default function Services() {
       {service.map((services) => {
         return (
           <div className="flex px-10" key={services.id}>
-            <div className="text-black bg-gray-200 h-[50%] text-4xl p-1 rounded-lg mr-4">
+            <div className="text-black bg-gray-200 h-[50%] text-xl md:text-4xl p-2 rounded-lg mr-4">
               <ion-icon name={`${services.icon}`}></ion-icon>
             </div>
             <div className="text-black">
-              <h2 className="text-4xl font-medium">{services.title}</h2>
+              <h2 className="text-2xl md:text-4xl font-medium">
+                {services.title}
+              </h2>
               <p className="pt-2">{services.text}</p>
             </div>
           </div>
