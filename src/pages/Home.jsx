@@ -1,6 +1,7 @@
 import Jumbo from "../components/Jumbo";
 import Services from "../components/Services";
 import Images from "../components/Images";
+import SubscriptionCard from "../components/SubscriptionCard";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Jumbo></Jumbo>
       <Services></Services>
       <Images></Images>
+      <SubscriptionCard></SubscriptionCard>
     </div>
   );
 }
