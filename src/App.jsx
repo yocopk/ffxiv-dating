@@ -2,6 +2,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import PaymentOptions from "./pages/PaymentOption";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Navbar></Navbar>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/payment" element={<PaymentOptions />} />
         </Routes>
         <Footer></Footer>
       </Router>
