@@ -10,3 +10,8 @@
   .swiper-button-next {
     color: rgb(252, 156, 172);; /* Sostituisci con il tuo colore preferito */
   }
+
+  .active {
+    color: black;
+    font-weight: bold;
+  }

@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -21,7 +21,8 @@ export default function Navbar() {
   }, []);
 
   let link = [
-    { id: 1, name: "HOME", link: "/" },
+    { id: 0, name: "HOME", link: "/" },
+    { id: 1, name: "NEWS", link: "/news" },
     { id: 2, name: "SERVICE", link: "/service" },
     { id: 3, name: "ABOUT", link: "/about" },
     { id: 4, name: "CONTACT", link: "/contact" },
@@ -34,6 +35,8 @@ export default function Navbar() {
           <p className="text-red-400 uppercase font-bold">Tinfantasy</p>
         </div>
 
+        {/* --------------------- MENU DESKTOP --------------------------------- */}
+
         <div
           onClick={() => setOpen(!open)}
           className="text-red-400 flex justify-end items-center text-3xl"
@@ -44,12 +47,12 @@ export default function Navbar() {
                 className="hidden lg:block text-base font-medium justify-center"
                 key={links.id}
               >
-                <Link
-                  className="transition-all hover:text-black px-4 border-red-400"
+                <NavLink
+                  className="transition-all hover:text-black px-4 border-red-400 active:text-yellow-500"
                   to={links.link}
                 >
                   {links.name}
-                </Link>
+                </NavLink>
               </ul>
             );
           })}
@@ -70,6 +73,8 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+
+      {/* --------------------- MENU MOBILE ------------------------------- */}
       <div>
         <ul
           className={`bg-white select-none w-full z-[-1] shadow-md absolute border-t-2 left-0 top-12 p-4 ${
@@ -93,12 +98,12 @@ export default function Navbar() {
           </p>
           {link.map((links) => (
             <li className="p-4" key={links.id}>
-              <Link
+              <NavLink
                 className="text-red-400 text-md transition-all hover:text-black font-bold"
                 to={links.link}
               >
                 {links.name}
-              </Link>
+              </NavLink>
             </li>
           ))}
         </ul>

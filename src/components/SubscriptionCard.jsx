@@ -9,7 +9,7 @@ const SubscriptionCard = ({ cards }) => {
           key={card.id}
         >
           <div className="border-b-[1px] border-black/30 w-full text-center">
-            <p className="p-2 text-black text-lg">{card.title}</p>
+            <p className="p-2 text-black text-lg font-medium">{card.title}</p>
           </div>
 
           <div className="">

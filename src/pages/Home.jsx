@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
+import NewsTab from "../components/NewsTab";
 
 export default function Home() {
   const subscriptionOptions = [
@@ -50,6 +51,7 @@ export default function Home() {
   return (
     <div>
       <Jumbo />
+      <NewsTab />
       <Services />
       <Images />
       <div className="bg-gray-200 py-12 px-4 text-center">
