@@ -1,11 +1,57 @@
 export default function ContactOption() {
-  return (
-    <div className="bg-white flex gap-3 w-screen pt-32 justify-center pb-8">
-      <div className="p-2 bg-red-400 rounded-lg text-xl h-9 text-white text-center flex items-center">
-        <ion-icon name="chatbubbles-outline"></ion-icon>
-      </div>
+  const option = [
+    {
+      id: 0,
+      icon: "chatbubbles-outline",
+      title: "Website support",
+      text: "Ut cursus est ut amet. Lobortis eget egestas leo vitae eget porttitor risus blandit. Nunc a in lorem vel iaculis porttitor.",
+    },
+    {
+      id: 1,
+      icon: "bug-outline",
+      title: "Bug reports",
+      text: "Ut cursus est ut amet. Lobortis eget egestas leo vitae eget porttitor risus blandit. Nunc a in lorem vel iaculis porttitor.",
+    },
+    {
+      id: 2,
+      icon: "hammer-outline",
+      title: "Technical support",
+      text: "Ut cursus est ut amet. Lobortis eget egestas leo vitae eget porttitor risus blandit. Nunc a in lorem vel iaculis porttitor.",
+    },
+  ];
 
-      <div className="flex flex-col justify-start gap-2">
+  return (
+    <div className="bg-gray-100 flex flex-col items-center gap-14 w-screen py-20 justify-center pb-8">
+      {option.map((options) => {
+        return (
+          <div
+            className="flex gap-3 p-10 bg-white rounded-lg shadow-md"
+            key={options.id}
+          >
+            <div className="p-2 bg-red-400 rounded-lg text-2xl h-9 text-white text-center flex items-center">
+              <ion-icon name={`${options.icon}`}></ion-icon>
+            </div>
+
+            <div className="flex flex-col justify-start gap-2">
+              <h3 className="text-2xl text-black/80 font-medium">
+                {options.title}
+              </h3>
+              <p className="text-black/60">{options.text}</p>
+              <button className="flex justify-start gap-2 items-center text-red-400 transition-all hover:text-black w-[15%]">
+                Contact us{" "}
+                <span className="flex">
+                  <ion-icon name="arrow-forward-outline"></ion-icon>
+                </span>
+              </button>
+            </div>
+          </div>
+        );
+      })}
+      {/* <div className="p-2 bg-red-400 rounded-lg text-2xl h-9 text-white text-center flex items-center">
+        <ion-icon name="chatbubbles-outline"></ion-icon>
+      </div> */}
+
+      {/* <div className="flex flex-col justify-start gap-2">
         <h3 className="text-xl text-black font-medium">Support</h3>
         <p className="text-black/60">
           Ut cursus est ut amet. Lobortis eget egestas leo vitae eget porttitor
@@ -17,7 +63,7 @@ export default function ContactOption() {
             <ion-icon name="arrow-forward-outline"></ion-icon>
           </span>
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }

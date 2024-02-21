@@ -22,9 +22,9 @@ export default function Navbar() {
 
   let link = [
     { id: 0, name: "HOME", link: "/" },
-    { id: 1, name: "NEWS", link: "/news" },
-    { id: 2, name: "SERVICE", link: "/service" },
-    { id: 3, name: "ABOUT", link: "/about" },
+    { id: 1, name: "NEWS", link: "/progress" },
+    { id: 2, name: "SERVICE", link: "/progress" },
+    { id: 3, name: "ABOUT", link: "/progress" },
     { id: 4, name: "CONTACT", link: "/contact" },
   ];
   return (
