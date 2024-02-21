@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function ContactOption() {
   const option = [
     {
@@ -5,18 +7,21 @@ export default function ContactOption() {
       icon: "chatbubbles-outline",
       title: "Website support",
       text: "Ut cursus est ut amet. Lobortis eget egestas leo vitae eget porttitor risus blandit. Nunc a in lorem vel iaculis porttitor.",
+      link: "Contact us",
     },
     {
       id: 1,
       icon: "bug-outline",
       title: "Bug reports",
       text: "Ut cursus est ut amet. Lobortis eget egestas leo vitae eget porttitor risus blandit. Nunc a in lorem vel iaculis porttitor.",
+      link: "Report a bug",
     },
     {
       id: 2,
       icon: "hammer-outline",
       title: "Technical support",
       text: "Ut cursus est ut amet. Lobortis eget egestas leo vitae eget porttitor risus blandit. Nunc a in lorem vel iaculis porttitor.",
+      link: "Join our Discord",
     },
   ];
 
@@ -37,12 +42,15 @@ export default function ContactOption() {
                 {options.title}
               </h3>
               <p className="text-black/60">{options.text}</p>
-              <button className="flex justify-start gap-2 items-center text-red-400 transition-all hover:text-black w-[15%]">
-                Contact us{" "}
+              <Link
+                to=""
+                className="flex justify-start gap-2 items-center text-red-400 transition-all hover:text-black md:w-[25%]"
+              >
+                {options.link}{" "}
                 <span className="flex">
                   <ion-icon name="arrow-forward-outline"></ion-icon>
                 </span>
-              </button>
+              </Link>
             </div>
           </div>
         );

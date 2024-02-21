@@ -24,7 +24,7 @@ export default function Navbar() {
     { id: 0, name: "HOME", link: "/" },
     { id: 1, name: "NEWS", link: "/progress" },
     { id: 2, name: "SERVICE", link: "/progress" },
-    { id: 3, name: "ABOUT", link: "/progress" },
+    { id: 3, name: "ABOUT", link: "/about" },
     { id: 4, name: "CONTACT", link: "/contact" },
   ];
   return (
@@ -58,15 +58,15 @@ export default function Navbar() {
           })}
           <Link
             className="hidden lg:block bg-red-500 text-white ml-4 text-base px-3 py-2 rounded-md transition-all hover:bg-black hover:text-white"
-            to="/"
+            to="/login"
           >
             Log-In
           </Link>
           <Link
             className="hidden lg:block text-red-400 border-[1px] border-red-400 ml-4 text-base px-3 py-2 rounded-md transition-all hover:bg-black hover:text-white hover:border-black"
-            to="/"
+            to="/register"
           >
-            Sign-In
+            Sign-Up
           </Link>
           <div className="flex items-center lg:hidden">
             <ion-icon name={open ? "close-outline" : "menu-outline"}></ion-icon>
@@ -92,7 +92,7 @@ export default function Navbar() {
           <p className="text-xs text-black">
             Don't have an account?{" "}
             <span className="text-red-400 cursor-pointer hover:text-black">
-              <Link to="/"></Link>Sign-up now!
+              <Link to="/register"></Link>Sign-up now!
             </span>
             <hr className="mt-4" />
           </p>
