@@ -1,7 +1,7 @@
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PaymentOptions from "./pages/PaymentOption";
 import Contact from "./pages/Contact";
 import WorkInProgress from "./pages/WorkInProgress";
