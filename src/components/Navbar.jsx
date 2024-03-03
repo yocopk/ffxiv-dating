@@ -30,10 +30,10 @@ export default function Navbar() {
   return (
     <nav className="fixed bg-white shadow-md left-0 right-0 z-10">
       <div className="bg-white flex md:max-w-[1400px] mx-auto justify-between items-center py-3 px-2">
-        <div className="flex justify-center items-center gap-3">
+        <Link to="/" className="flex justify-center items-center gap-3">
           <img className="h-9" src="src\assets\ffxiv-dating-logo.png" alt="" />
           <p className="text-red-400 uppercase font-bold">Tinfantasy</p>
-        </div>
+        </Link>
 
         {/* --------------------- MENU DESKTOP --------------------------------- */}
 
@@ -85,7 +85,7 @@ export default function Navbar() {
         >
           <Link
             className="bg-red-500 text-white m-4 p-3 rounded-md transition-all hover:bg-black hover:text-white"
-            to="/"
+            to="/login"
           >
             Log-In
           </Link>
